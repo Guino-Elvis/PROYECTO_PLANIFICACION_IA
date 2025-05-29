@@ -1,0 +1,64 @@
+<div class="w-full">
+  <h2 class="pb-14 font-medium text-3xl text-blue-400 text-center section-header">
+    Contact Us
+  </h2>
+  <div class="flex flex-row flex-wrap justify-center items-center w-full">
+    <section class="bg-white">
+      <div class="mx-auto px-4 max-w-screen-md">
+        <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 sm:text-xl dark:text-gray-400">
+          Got a technical issue? Want to send feedback about a beta feature?
+          Need details about our Business plan? Let us know.
+        </p>
+        <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="space-y-8">
+          <div>
+            <label class="block mb-2 font-medium text-gray-900 text-sm">
+              Your email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              ngModel
+              required
+              class="block border-gray-300 focus:border-primary-500 bg-gray-50 shadow-sm p-2.5 border rounded-lg focus:ring-primary-500 w-full text-gray-900 text-sm"
+              placeholder="name@flowbite.com"
+            />
+          </div>
+          <div>
+            <label class="block mb-2 font-medium text-gray-900 text-sm">
+              Subject
+            </label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              ngModel
+              required
+              class="block border-gray-300 focus:border-primary-500 bg-gray-50 shadow-sm p-3 border rounded-lg focus:ring-primary-500 w-full text-gray-900 text-sm"
+              placeholder="Let us know how we can help you"
+            />
+          </div>
+          <div class="sm:col-span-2">
+            <label class="block mb-2 font-medium text-gray-900 text-sm">
+              Your message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              ngModel
+              class="block border-gray-300 focus:border-primary-500 bg-gray-50 shadow-sm p-2.5 border rounded-lg focus:ring-primary-500 w-full text-gray-900 text-sm"
+              placeholder="Leave a comment..."
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="bg-[#00C0F5] hover:bg-primary-800 px-5 py-3 rounded-lg focus:ring-4 focus:ring-primary-300 sm:w-fit font-medium text-center text-sm text-white focus:outline-none"
+          >
+            Send message
+          </button>
+        </form>
+      </div>
+    </section>
+  </div>
+</div>

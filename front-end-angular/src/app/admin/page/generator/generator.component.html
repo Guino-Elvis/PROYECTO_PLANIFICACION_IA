@@ -1,0 +1,133 @@
+<app-layout title="Generador con IA">
+  <app-custom-link icon="ph-file" texto="Generador con IA"></app-custom-link>
+
+  <div class="w-full my-10 bg-white py-10 px-6 rounded-md overflow-auto max-h-[50rem]">
+    <h2 class="text-3xl font-bold text-[#1467A6] mb-10 text-center">Planificación de Clase con IA</h2>
+
+    <form class="space-y-8 w-full max-w-7xl mx-auto">
+      <!-- Nivel educativo, Grado, Curso -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div>
+          <label class="block mb-1 font-semibold text-gray-700">Nivel educativo</label>
+          <select class="w-full border rounded-md p-2 focus:ring-[#1467A6] focus:border-[#1467A6]">
+            <option disabled selected>Seleccionar...</option>
+            <option>Inicial</option>
+            <option>Primaria</option>
+            <option>Secundaria</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block mb-1 font-semibold text-gray-700">Grado</label>
+          <select class="w-full border rounded-md p-2 focus:ring-[#1467A6] focus:border-[#1467A6]">
+            <option disabled selected>Seleccionar...</option>
+            <option>1°</option>
+            <option>2°</option>
+            <option>3°</option>
+            <option>4°</option>
+            <option>5°</option>
+            <option>6°</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block mb-1 font-semibold text-gray-700">Curso / Sección</label>
+          <input type="text" class="w-full border rounded-md p-2 focus:ring-[#1467A6] focus:border-[#1467A6]"
+            placeholder="Ej: A, B, C..." />
+        </div>
+      </div>
+
+      <!-- Asignatura, Fecha, Currículo -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div>
+          <label class="block mb-1 font-semibold text-gray-700">Asignatura</label>
+          <input type="text" placeholder="Ej: Matemáticas" class="w-full border rounded-md p-2 focus:ring-[#1467A6]" />
+        </div>
+
+        <div>
+          <label class="block mb-1 font-semibold text-gray-700">Fecha</label>
+          <input type="date" class="w-full border rounded-md p-2 focus:ring-[#1467A6]" />
+        </div>
+
+        <div>
+          <label class="block mb-1 font-semibold text-gray-700">Currículo</label>
+          <select class="w-full border rounded-md p-2 focus:ring-[#1467A6] focus:border-[#1467A6]">
+            <option disabled selected>Seleccionar...</option>
+            <option>Currículo Nacional</option>
+            <option>Regionalizado</option>
+            <option>Otro</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Objetivos -->
+      <div>
+        <label class="block mb-1 font-semibold text-gray-700">Objetivo(s) de la clase</label>
+        <textarea rows="3" placeholder="Describe los objetivos de aprendizaje"
+          class="w-full border rounded-md p-2 focus:ring-[#1467A6]"></textarea>
+      </div>
+
+      <!-- Indicadores de logro -->
+      <div>
+        <label class="block mb-1 font-semibold text-gray-700">Indicadores de logro</label>
+        <textarea rows="3" placeholder="Ej: Identifica, relaciona, aplica..."
+          class="w-full border rounded-md p-2 focus:ring-[#1467A6]"></textarea>
+      </div>
+
+      <!-- Actividades por fases -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div>
+          <label class="block mb-1 font-semibold text-gray-700">Inicio</label>
+          <textarea rows="4" placeholder="Actividades para iniciar la clase"
+            class="w-full border rounded-md p-2 focus:ring-[#1467A6]"></textarea>
+        </div>
+        <div>
+          <label class="block mb-1 font-semibold text-gray-700">Desarrollo</label>
+          <textarea rows="4" placeholder="Actividades centrales de aprendizaje"
+            class="w-full border rounded-md p-2 focus:ring-[#1467A6]"></textarea>
+        </div>
+        <div>
+          <label class="block mb-1 font-semibold text-gray-700">Cierre</label>
+          <textarea rows="4" placeholder="Actividades de cierre y reflexión"
+            class="w-full border rounded-md p-2 focus:ring-[#1467A6]"></textarea>
+        </div>
+      </div>
+
+      <!-- Recursos -->
+      <div>
+        <label class="block mb-1 font-semibold text-gray-700">Recursos didácticos</label>
+        <input type="text" placeholder="Ej: Material visual, TIC, cuadernos, etc."
+          class="w-full border rounded-md p-2 focus:ring-[#1467A6]" />
+      </div>
+
+      <!-- Evaluación -->
+      <div>
+        <label class="block mb-1 font-semibold text-gray-700">Evaluación</label>
+        <textarea rows="3" placeholder="Técnicas e instrumentos de evaluación"
+          class="w-full border rounded-md p-2 focus:ring-[#1467A6]"></textarea>
+      </div>
+
+      <!-- Generar con IA -->
+      <div class="flex items-center space-x-3">
+        <input type="checkbox" id="useIa" class="accent-[#1467A6]" />
+        <label for="useIa" class="text-gray-700 font-medium">Usar IA para sugerir planificación</label>
+      </div>
+
+      <!-- Resultado generado por IA -->
+      <div>
+        <label class="block mb-1 font-semibold text-gray-700">Sugerencia generada por IA</label>
+        <textarea readonly rows="6" placeholder="Aquí se mostrará el resultado generado..."
+          class="w-full border rounded-md p-2 bg-gray-100 text-gray-600"></textarea>
+      </div>
+
+      <!-- Botón de envío -->
+      <div class="text-center">
+        <button
+          type="submit"
+          class="bg-[#1467A6] hover:bg-[#0f4f80] text-white font-semibold px-8 py-3 rounded-md transition">
+          Generar Planificación
+        </button>
+      </div>
+    </form>
+  </div>
+</app-layout>

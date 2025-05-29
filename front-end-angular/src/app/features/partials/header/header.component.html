@@ -1,0 +1,82 @@
+<nav [ngClass]="{
+  'bg-[#00C0F5]': isScrolled,
+  'bg-transparent': !isScrolled
+}" class="top-0 z-50 sticky py-4 transition-all duration-300">
+    <div class="md:container xl:container 2xl:container">
+        <div class="px-4 xl:px-28">
+            <div class="relative flex justify-between items-center">
+                <!-- Mobile Menu Button -->
+                <div class="sm:hidden left-0 absolute inset-y-0 flex items-center">
+                    <button (click)="mobileMenuOpen = !mobileMenuOpen"
+                        class="inline-flex justify-center items-center hover:bg-gray-700 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-white focus:ring-inset text-white hover:text-white">
+                        <span class="sr-only">Open main menu</span>
+                        <svg *ngIf="!mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg *ngIf="mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Logo -->
+                <div class="hidden sm:block shrink-0">
+                    <img src="assets/img/logo-nav-white-removebg-preview.png" alt="Your Company" class="w-auto h-8" />
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden sm:block sm:ml-6">
+                    <div class="flex space-x-4">
+                        <a *ngFor="let item of navigation" [routerLink]="item.href" [routerLinkActive]="'text-white'"
+                            class="px-3 py-2 rounded-md font-bold text-md text-white hover:text-gray-50">
+                            {{ item.name }}
+                        </a>
+                    </div>
+                </div>
+
+                <!-- User Info or Sign In -->
+                <div class="right-0 sm:static absolute inset-y-0 sm:inset-auto flex items-center sm:ml-6 pr-2 sm:pr-0">
+                  
+                        <!-- <ng-container *ngIf="userData; else login"> -->
+                            <!-- <div class="relative flex items-center gap-2">
+                                <span class="font-bold text-md text-white">aaaa</span>
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                    class="rounded-full w-8 h-8" alt="" />
+                                <div
+                                    class="top-full right-0 z-50 absolute bg-white shadow-lg mt-2 rounded-md ring-1 ring-black/5 w-48">
+                                    <div class="py-1 font-bold text-gray-300 text-sm text-center">aaaaa
+                                    </div>
+                                    <a routerLink="/"
+                                        class="block hover:bg-gray-100 px-4 py-2 text-gray-700 text-sm">Your Profile</a>
+                                    <a routerLink="/"
+                                        class="block hover:bg-gray-100 px-4 py-2 text-gray-700 text-sm">Settings</a>
+                                    <button (click)="logout()"
+                                        class="hover:bg-gray-100 px-4 py-2 w-full text-gray-700 text-sm text-left">Logout</button>
+                                </div>
+                            </div> -->
+
+                        <!-- <ng-template #login> -->
+                        <a routerLink="/login" class="font-bold text-md text-white hover:text-gray-50">Sign in</a>
+                        <!-- </ng-template>-->
+                    <!-- </ng-container> -->
+
+                    <!-- <ng-template #loadingUser>
+            <span class="font-medium text-white">Cargando...</span>
+          </ng-template> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div *ngIf="mobileMenuOpen" class="sm:hidden space-y-1 px-2 pt-10 pb-3">
+        <a *ngFor="let item of navigation" [routerLink]="item.href"
+            class="block hover:bg-gray-700 px-3 py-2 rounded-md font-medium text-white hover:text-white text-base">
+            asd
+        </a>
+    </div>
+</nav>

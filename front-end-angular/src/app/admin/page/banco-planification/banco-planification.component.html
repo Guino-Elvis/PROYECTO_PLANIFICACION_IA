@@ -1,0 +1,72 @@
+<app-layout title="Banco de Planificaciones Colaborativas">
+    <app-custom-link icon="ph-file" texto="Banco de Planificaciones Colaborativas"></app-custom-link>
+
+    <div class="flex justify-center items-center bg-white my-10 px-4 py-4 rounded-md w-auto h-auto">
+        <div class="flex flex-col gap-4 w-full">
+            <div class="flex flex-wrap-reverse justify-between gap-2">
+                <div class="flex flex-wrap-reverse justify-center items-center gap-4">
+                    <div class="relative flex items-center">
+                        <fa-icon [icon]="icons.search " class="left-3 absolute text-gray-400"></fa-icon>
+                        <input
+                            class="bg-transparent py-[0.4800rem] pr-5 pl-10 border border-gray-300 rounded-lg focus-visible:outline-none text-black placeholder-gray-400"
+                            placeholder="Buscar categoría">
+                    </div>
+                    <div
+                        class="flex flex-row flex-wrap md:flex-nowrap lg:flex-nowrap xl:flex-nowrap justify-start items-start gap-2">
+                        <app-reusable-button [icon]="sortOrder === 'asc' ? icons.arrowDown19 : icons.arrowUp91" text=""
+                            variante="outlined" size="xl">
+                        </app-reusable-button>
+                        <app-reusable-button [icon]="icons.rotate" text="" variante="outlined" size="xl">
+                        </app-reusable-button>
+                        <app-custom-datepicker></app-custom-datepicker>
+                    </div>
+                </div>
+                <app-reusable-button [icon]="icons.add" text="Crear" variante="contained" size="lg">
+                </app-reusable-button>
+            </div>
+            <div class="rounded-lg min-h-[30rem] max-h-[40rem] overflow-auto">
+
+                <div class="grid grid-cols-1 xl:grid-cols-2 gap-8 relative">
+
+                    <!-- CARD 1 -->
+                    <div *ngFor="let card of cards"  class="relative bg-[#F9FAFB] border-l-4 border-[#1467A6] p-6 rounded-lg shadow-md">
+
+                        <!-- OREJA DE ACCIONES -->
+                        <div class="absolute -top-1 right-2 flex gap-2 z-10">
+                            <button
+                                class="bg-[#1467A6] text-white text-xs px-3 py-1 rounded-full shadow hover:bg-[#125a8f]">Editar</button>
+                            <button
+                                class="bg-red-500 text-white text-xs px-3 py-1 rounded-full shadow hover:bg-red-600">Eliminar</button>
+                            <button
+                                class="bg-green-600 text-white text-xs px-3 py-1 rounded-full shadow hover:bg-green-700">Publicar</button>
+                        </div>
+
+                        <div class="mb-2 flex items-center justify-between mt-3">
+                            <span class="text-xs text-gray-500">Publicado por: <strong>Prof. Ana Torres</strong></span>
+                            <span class="text-xs text-gray-500">🌟 32 Me gusta</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#283943]">Secuencia Didáctica - Ecosistemas y su Conservación
+                        </h3>
+                        <p class="text-sm text-gray-600 mt-2 line-clamp-3">
+                            Actividades integradas para comprender los ecosistemas locales, biodiversidad y acciones
+                            sustentables. Incluye rúbricas, actividades grupales y recursos multimedia.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="bg-[#1467A6] text-white text-xs px-3 py-1 rounded-full">Ciencias
+                                Naturales</span>
+                            <span class="bg-gray-200 text-[#283943] text-xs px-2 py-1 rounded-full">5to Grado</span>
+                            <span class="bg-gray-200 text-[#283943] text-xs px-2 py-1 rounded-full">Bimestral</span>
+                        </div>
+                        <div class="mt-4 flex items-center justify-between text-xs text-gray-500">
+                            <span>📅 Mayo 2025</span>
+                            <button class="text-[#1467A6] hover:underline">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</app-layout>

@@ -1,0 +1,122 @@
+<div class="relative w-full">
+    <!-- Fondo con imagen -->
+    <div class="w-full max-h-[60rem]"
+        style="background-image: url('assets/img/fondo-nav.jpeg'); background-repeat: no-repeat; background-size: cover; background-attachment: fixed;">
+        <!-- Fondo negro translúcido -->
+        <div class="top-0 left-0 z-[1] absolute bg-black opacity-50 w-full h-full"></div>
+
+        <!-- Contenido de la página -->
+        <div class="z-10 relative">
+            <!-- nav-bar -->
+            <app-header></app-header>
+
+            <!-- Sección Intro -->
+            <div class="flex justify-center items-start w-full">
+                <div class="md:container xl:container 2xl:container">
+                    <div class="px-4 sm:px-0 md:px-0 xl:px-28">
+                        <div class="flex flex-col w-full h-auto">
+                            <div class="flex flex-wrap justify-between pt-[10rem] w-full">
+                                <div class="flex flex-col justify-start items-start gap-8">
+                                    <h2
+                                        class="max-w-[42rem] font-extrabold text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+                                        Plan The Class Of Your <span class="text-[#FBB034]">Dream</span> By Planifica
+                                        Edu Pro
+                                    </h2>
+                                    <h2 class="max-w-[42rem] font-bold text-white text-lg sm:text-xl md:text-2xl">
+                                        The Smart Solution for fast, <span class="text-[#FBB034]">effective,</span> and
+                                        hassle-free class planning
+                                    </h2>
+
+                                    <button 
+                                        class="bg-[#FBB034] hover:bg-[#00C0F5] px-10 py-2 rounded-full font-bold text-white">
+                                        Active Learning
+                                    </button>
+
+                                    <div class="flex flex-wrap gap-6 pt-6 pb-[12.9rem] w-auto">
+                                        <div
+                                            class="flex justify-center items-center bg-white p-2 border rounded-full w-12 h-12">
+                                            <img src="assets/img/google.jpg" alt="google" />
+                                        </div>
+                                        <div
+                                            class="flex justify-center items-center bg-white p-2 border rounded-full w-12 h-12">
+                                            <img src="assets/img/microsoft.jpg" alt="microsoft" />
+                                        </div>
+                                        <div
+                                            class="flex justify-center items-center bg-white p-2 border rounded-full w-12 h-12">
+                                            <img src="assets/img/facebook.png" alt="facebook" />
+                                        </div>
+                                        <div
+                                            class="flex justify-center items-center bg-white p-2 border rounded-full w-12 h-12">
+                                            <img src="assets/img/facebook.png" alt="facebook" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Services y Razones -->
+            <div class="flex justify-center items-start w-full">
+                <div class="md:container xl:container 2xl:container">
+                    <div class="px-4 sm:px-0 md:px-0 xl:px-28">
+                        <div class="flex flex-col gap-[10rem] py-[10rem] w-full h-auto">
+                            <app-service></app-service>
+                            <app-reason></app-reason>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TotalClientes con fondo -->
+            <div class="relative">
+                <div class="top-0 left-0 absolute w-full h-full"
+                    style="background-image: url('/assets/img/fondo-nav.jpeg'); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; z-index: 0;">
+                    <div class="top-0 left-0 z-[1] absolute bg-[#023052] opacity-80 w-full h-full"></div>
+                </div>
+
+                <div class="z-10 relative">
+                    <div class="flex justify-center items-start w-full">
+                        <div class="md:container xl:container 2xl:container">
+                            <div class="px-4 sm:px-0 md:px-0 xl:px-28 py-[1.5rem]">
+                                <app-client></app-client>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Suscripción y Contáctenos -->
+            <div class="flex justify-center items-start w-full">
+                <div class="md:container xl:container 2xl:container">
+                    <div class="px-4 sm:px-0 md:px-0 xl:px-28">
+                        <div class="flex flex-col gap-[10rem] py-[10rem] w-full h-auto">
+                            <app-plan></app-plan>
+                            <app-contact></app-contact>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer con fondo -->
+            <div class="relative">
+                <div class="top-0 left-0 absolute w-full h-full"
+                    style="background-image: url('/assets/img/fondo-nav.jpeg'); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; z-index: 0;">
+                    <div class="top-0 left-0 z-[1] absolute bg-[#023052] bg-opacity-80 w-full h-full"></div>
+                </div>
+
+                <div class="z-10 relative">
+                    <div class="flex justify-center items-start w-full">
+                        <div class="md:container xl:container 2xl:container">
+                            <div class="px-4 sm:px-0 md:px-0 xl:px-28 py-[1.5rem]">
+                                <app-footer-home></app-footer-home>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

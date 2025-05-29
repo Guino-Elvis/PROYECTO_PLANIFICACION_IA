@@ -1,0 +1,48 @@
+<div class="gap-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 px-3">
+    <div *ngIf="plans.length === 0" class="py-4 w-full text-center">
+        <div class="flex justify-center items-center">
+            <app-no-item-page></app-no-item-page>
+        </div>
+    </div>
+    <div *ngFor="let plan of plans"
+        class="flex flex-col justify-between bg-white shadow-[5px_5px_10px_#d6d6d6,_-5px_-5px_10px_#ffffff] px-10 py-8 border border-gray-100 rounded-xl w-auto h-auto sm:h-auto hover:scale-105 transition-transform duration-300">
+        <div class="flex flex-col">
+            <h3 class="mb-4 font-bold text-2xl text-center">
+                {{plan.name}}
+            </h3>
+            <p class="font-light text-gray-500 sm:text-lg text-center">
+                {{plan.description}}
+            </p>
+            <div class="flex justify-center items-baseline my-8">
+                <span class="mr-2 text-5xl" style="font-family: Impact, 'Arial Narrow Bold';">
+                    ${{plan.monthly_price}}
+                </span>
+                <span class="text-gray-500">/month</span>
+            </div>
+            <ul class="space-y-4 mb-8 text-left">
+                <li *ngFor="let benefit of plan.benefits" class="flex items-center space-x-3 max-w-sm">
+                    <fa-icon [icon]="icons.check " class="flex-shrink-0 text-green-500"></fa-icon>
+                    <div class="flex flex-row flex-wrap gap-2 max-w-full break-words">
+                        {{benefit.description}}
+                    </div>
+                </li>
+
+                <li class="flex items-center space-x-3 max-w-sm">
+                    <fa-icon [icon]="icons.check " class="flex-shrink-0 text-green-500"></fa-icon>
+                    <div class="flex flex-row flex-wrap gap-2 max-w-full break-words">
+                        <h2>Tamaño del equipo</h2>
+                        <h2 class="font-bold">
+                            {{plan.team_size}}
+                            {{plan.team_size === "1" ? " Usuario" : " Usuarios"}}
+                        </h2>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <a href="/"
+            class="bg-[#00C0F5] hover:bg-primary-700 px-5 py-2.5 rounded-lg focus:ring-4 focus:ring-primary-200 font-medium text-white text-sm text-center">
+            Get started
+        </a>
+    </div>
+
+</div>

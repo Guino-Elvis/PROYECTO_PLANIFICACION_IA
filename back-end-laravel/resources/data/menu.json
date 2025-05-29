@@ -1,0 +1,99 @@
+[
+  {
+    "icon": "ph-house",
+    "name": "Dashboard",
+    "roles": ["Administrador"],
+    "route": "/welcome"
+  },
+  {
+    "icon": "ph-gear",
+    "name": "Administracion",
+    "submenu": [
+      {
+        "icon": "ph-buildings",
+        "name": "Compañias",
+        "roles": ["Administrador", "Empresa"],
+        "route": "/company"
+      },
+      {
+        "icon": "ph-user-plus",
+        "name": "Usuarios",
+        "roles": ["Administrador", "Empresa"],
+        "route": "/administration-user"
+      }
+    ]
+  },
+  {
+    "icon": "ph-folders",
+    "name": "Curriculos",
+    "roles": ["Administrador"],
+    "route": "/curriculum"
+  },
+    {
+    "icon": "ph-chat-circle",
+    "name": "Chats",
+    "roles": ["Administrador"],
+    "route": "/chat"
+  },
+  {
+    "icon": "ph-newspaper-clipping",
+    "name": "Publicaciones",
+    "roles": ["Administrador"],
+    "route": "/publication"
+  },
+  {
+    "icon": "ph-brain",
+    "name": "Generador IA",
+    "roles": ["Administrador", "Empresa"],
+    "route": "/generator"
+  },
+  {
+    "icon": "ph-file-text",
+    "name": "Mi Planificación",
+    "roles": ["Administrador", "Empresa"],
+    "route": "/planning"
+  },
+    {
+    "icon": "ph-brain",
+    "name": "Repo & Recursos",
+    "roles": ["Administrador", "Empresa"],
+    "route": "/repositorio"
+  },
+  {
+    "icon": "ph-file-text",
+    "name": "Colab Planing",
+    "roles": ["Administrador", "Empresa"],
+    "route": "/banco-planification"
+  },
+  {
+    "icon": "ph-gear",
+    "name": "Setting Page",
+    "submenu": [
+      {
+        "icon": "ph-headset",
+        "name": "Servicios",
+        "roles": ["Administrador"],
+        "route": "/company"
+      },
+      {
+        "icon": "ph-leaf",
+        "name": "Rason",
+        "roles": ["Administrador"],
+        "route": "/administration-user"
+      },
+      {
+        "icon": "ph-wallet",
+        "name": "Plan suscripción",
+        "roles": ["Administrador"],
+        "route": "/administration-user"
+      },
+      {
+        "icon": "ph-sketch-logo",
+        "name": "Plan beneficios",
+        "roles": ["Administrador"],
+        "route": "/administration-user"
+      }
+    ]
+  }
+
+]

@@ -1,0 +1,23 @@
+<div class="w-full">
+    <div class="flex flex-row flex-wrap justify-center items-center w-full">
+        <div *ngIf="clients.length === 0" class="py-4 w-full text-center">
+            <div class="flex justify-center items-center">
+                <app-no-item-page></app-no-item-page>
+            </div>
+        </div>
+        <div *ngFor="let client of clients" class="px-3 py-4 w-full sm:w-full md:w-6/12 lg:w-4/12 xl:w-4/12">
+            <div class="flex flex-col justify-center items-center gap-4">
+                <img class="flex justify-center items-center w-20 hover:scale-110 transition-transform duration-300"
+                    src="assets/img/icons/docente-feliz.png" alt="lectura" />
+                <div class="flex-col text-center">
+                    <h3 class="font-bold text-[#00C0F5] text-xl">
+                        <span style="font-size: 40px">{{ client.total }}</span>
+                        <br />
+                        {{ client.tipo }}
+                    </h3>
+                    <p class="font-semibold text-white text-sm">{{ client.detalle }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
